@@ -1,14 +1,11 @@
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      python: 3.8.16  
-    commands:
-      - pip install -r requirements.txt  # Install dependencies
-  build:
-    commands:
-      - python manage.py collectstatic --noinput 
-      - python manage.py migrate  
-artifacts:
-  files:
-    - '**/*' 
+version: 1.0
+runtime: python3
+build:
+  commands:
+    build:
+      - python -m pip install -r requirements.txt
+run:
+  runtime-version: 3.8.16
+  command: sh startup.sh
+  network:
+    port: 8000
