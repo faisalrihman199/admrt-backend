@@ -3,4 +3,4 @@
 
 
 
-python manage.py migrate && python manage.py runserver 0.0.0.0:8000 && python manage.py runserver 0.0.0.0:8000 collectstatic --noinput && waitress-serve --listen=0.0.0.0:8000 admrt.wsgi:application
+python manage.py migrate && python manage.py runserver 0.0.0.0:8080 && python manage.py runserver 0.0.0.0:8080 collectstatic --noinput && waitress-serve --listen=0.0.0.0:8080 admrt.wsgi:application
